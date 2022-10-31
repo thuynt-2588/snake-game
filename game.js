@@ -13,17 +13,13 @@ function draw() {
 
 function drawSnake() {
   // update every SNAKE_SPEED frame
-  if (frameCount % SNAKE_SPEED == 0) {
-    snake.update()
-  }
+  if (frameCount % SNAKE_SPEED == 0) snake.update()
 
   food.show()
   snake.show()
 
   // Handle when snake eat food
-  if (snake.head.x == food.x && snake.head.y == food.y) {
-    eatFood()
-  }
+  if (snake.head.x == food.x && snake.head.y == food.y) eatFood()
 }
 
 function newGame() {
